@@ -1,20 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
+//using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
-using DotNetCore.Core.Security;
-using DotNetCore.Core.Security.Models;
-using DotNetCore.Core.Utilities;
-using DotNetCore.Data.EntityFramework.Identity.Models;
-using DotNetCore.Data.EntityFramework.Identity.Utilities;
-using Microsoft.AspNet.Identity;
+using Berg8.Core.Security;
+using Berg8.Core.Security.Models;
+using Berg8.Core.Utilities;
+using Berg8.Data.EntityFramework.Identity.Models;
+using Berg8.Data.EntityFramework.Identity.Utilities;
+//using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Identity;
 
-namespace DotNetCore.Data.EntityFramework.Identity
+namespace Berg8.Data.EntityFramework.Identity
 {
     public class RoleManager : IRoleManager
     {
-        private readonly Microsoft.AspNet.Identity.RoleManager<AppRole, int> _roleManager;
+        private readonly Microsoft.AspNetCore.Identity.RoleManager<AppRole> _roleManager;
+        //private readonly Microsoft.AspNet.Identity.RoleManager<AppRole, int> _roleManager;
         private bool _disposed;
 
         public RoleManager(RoleManager<AppRole, int> roleManager) {

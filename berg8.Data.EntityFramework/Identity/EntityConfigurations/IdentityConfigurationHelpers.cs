@@ -1,7 +1,8 @@
-﻿using System.Data.Entity.ModelConfiguration;
-using DotNetCore.Data.EntityFramework.Identity.Models;
+﻿//using System.Data.Entity.ModelConfiguration;
+using Berg8.Data.EntityFramework.Identity.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace DotNetCore.Data.EntityFramework.Identity.EntityConfigurations
+namespace Berg8.Data.EntityFramework.Identity.EntityConfigurations
 {
     public static class IdentityConfigurationHelpers
     {

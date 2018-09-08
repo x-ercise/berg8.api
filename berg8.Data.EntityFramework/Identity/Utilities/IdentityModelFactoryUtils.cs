@@ -1,8 +1,8 @@
-﻿using DotNetCore.Core.Security.Models;
-using DotNetCore.Core.Utilities;
-using DotNetCore.Data.EntityFramework.Identity.Models;
+﻿using Berg8.Core.Security.Models;
+using Berg8.Core.Utilities;
+using Berg8.Data.EntityFramework.Identity.Models;
 
-namespace DotNetCore.Data.EntityFramework.Identity.Utilities
+namespace Berg8.Data.EntityFramework.Identity.Utilities
 {
     public static class IdentityModelFactoryUtils
     {

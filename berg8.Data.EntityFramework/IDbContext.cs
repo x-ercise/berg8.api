@@ -1,14 +1,17 @@
 ﻿using System;
-using System.Data.Entity;
+using System.Collections.Generic;
+//using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Threading;
 using System.Threading.Tasks;
-using DotNetCore.Core.Domain;
+using Berg8.Core.Domain;
 
-namespace DotNetCore.Data.EntityFramework
+
+namespace Berg8.Data.EntityFramework
 {
     public interface IDbContext : IDisposable
     {
-        IDbSet<T> Set<T>() where T : BaseEntity;
+        ISet<T> Set<T>() where T : BaseEntity;
 
         void SetAsAdded<T>(T entity) where T : BaseEntity;
 

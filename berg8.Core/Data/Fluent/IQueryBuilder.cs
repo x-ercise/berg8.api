@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using DotNetCore.Core.Domain;
+using Berg8.Core.Domain;
 
-namespace DotNetCore.Core.Data.Fluent
+namespace Berg8.Core.Data.Fluent
 {
     public interface IQueryBuilder<out T, out TQueryBuilder> : IQueryable<T>, IQueryable
         where T : BaseEntity

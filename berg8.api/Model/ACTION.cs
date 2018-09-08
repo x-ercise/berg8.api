@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Xml.Serialization;
+﻿using System.Collections.Generic;
 
-namespace api.Model
+namespace berg8.api.Model
 {
     public class ACTION
     {
 
-        [DefaultValue(value: "")] public string CODE { get; set; }
-        [DefaultValue(value: "")] public string TEXT { get; set; }
-        [DefaultValue(value: false)] public bool ENABLED { get; set; }
-        [DefaultValue(value: false)] public bool VISIBLED { get; set; }
+        public string CODE { get; set; }
+        public string TEXT { get; set; }
+        public bool ENABLED { get; set; }
+        public bool VISIBLED { get; set; }
 
         public ACTION()
         {
@@ -49,6 +46,11 @@ namespace api.Model
                 approval.VISIBLED = true;
                 reject.VISIBLED = true;
                 callback.VISIBLED = true;
+
+                result.Add(amend);
+                result.Add(approval);
+                result.Add(reject);
+                result.Add(callback);
             }
             else if (request.OPERATOR.CODE == "APPROVER")
             {
@@ -61,12 +63,21 @@ namespace api.Model
                 approval.VISIBLED = true;
                 reject.VISIBLED = true;
                 sndback.VISIBLED = true;
+
+                result.Add(amend);
+                result.Add(approval);
+                result.Add(reject);
+                result.Add(sndback);
             }
             else
             {
                 amend.VISIBLED = true;
                 approval.VISIBLED = true;
                 reject.VISIBLED = true;
+
+                result.Add(amend);
+                result.Add(approval);
+                result.Add(reject);
             }
 
             return result;

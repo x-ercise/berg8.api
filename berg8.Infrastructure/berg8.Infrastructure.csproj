@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="4.5.8" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\berg8.Core\berg8.Core.csproj" />
+  </ItemGroup>
 </Project>

@@ -1,9 +1,9 @@
-﻿using DotNetCore.Core.Security.Models;
-using DotNetCore.Data.EntityFramework.Identity.Models;
+﻿using Berg8.Core.Security.Models;
+using Berg8.Data.EntityFramework.Identity.Models;
 using Microsoft.AspNet.Identity;
-using UserLoginInfo = DotNetCore.Core.Security.Models.UserLoginInfo;
+using UserLoginInfo = Berg8.Core.Security.Models.UserLoginInfo;
 
-namespace DotNetCore.Data.EntityFramework.Identity.Utilities
+namespace Berg8.Data.EntityFramework.Identity.Utilities
 {
     public class IdentityModelFactory
     {

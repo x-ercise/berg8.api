@@ -1,13 +1,18 @@
 ﻿using System.Data;
 using System.Data.Common;
-using System.Data.Entity;
-using System.Data.Entity.Core.Objects;
-using System.Data.Entity.Infrastructure;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+//using System.Data.Entity;
+//using System.Data.Entity.Core.Objects;
+//using System.Data.Entity.Infrastructure;
 using System.Threading.Tasks;
-using DotNetCore.Core.Domain;
-using DotNetCore.Core.Utilities;
+using Berg8.Core;
+using Berg8.Core.Domain;
+using Berg8.Core.Utilities;
+using System.Collections.Generic;
 
-namespace DotNetCore.Data.EntityFramework
+namespace Berg8.Data.EntityFramework
 {
     public abstract class BaseDbContext : DbContext, IDbContext
     {
@@ -101,6 +106,11 @@ namespace DotNetCore.Data.EntityFramework
             return dbEntityEntry;
         }
 
+        public Task<int> SaveChangesAsync()
+        {
+            throw new System.NotImplementedException();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -114,6 +124,11 @@ namespace DotNetCore.Data.EntityFramework
             }
 
             base.Dispose(disposing);
+        }
+
+        ISet<T> IDbContext.Set<T>()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

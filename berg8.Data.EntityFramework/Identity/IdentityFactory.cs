@@ -1,10 +1,13 @@
 ﻿using System;
-using System.Data.Entity;
-using DotNetCore.Data.EntityFramework.Identity.Models;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
+//using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
+using Berg8.Data.EntityFramework.Identity.Models;
+//using Microsoft.AspNet.Identity;
+//using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
-namespace DotNetCore.Data.EntityFramework.Identity
+namespace Berg8.Data.EntityFramework.Identity
 {
     public class IdentityFactory
     {

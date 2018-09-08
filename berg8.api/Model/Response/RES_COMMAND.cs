@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace api.Model.Response
+namespace berg8.api.Model.Response
 {
     public class RES_COMMAND
     {

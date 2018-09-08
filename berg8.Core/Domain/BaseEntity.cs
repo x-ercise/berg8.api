@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DotNetCore.Core.Domain
+namespace Berg8.Core.Domain
 {
     public abstract class BaseEntity : IIdentifiable<int>
     {

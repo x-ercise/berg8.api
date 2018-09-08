@@ -1,16 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using api.Model.Enum;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
-namespace api.Model
+namespace berg8.api.Model
 {
+    using berg8.api.Model.Enum;
     public class DOCUMENT
     {
         public string CODE { get; set; }
-        public DOCUMENT_TYPE DOC_TYPE { get; set; }
-        public TRANS_TYPE TRANS_TYPE { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))] public DOCUMENT_TYPE DOC_TYPE { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))] public TRANS_TYPE TRANS_TYPE { get; set; }
         public string TRANS_DATE { get; set; }
         public string PLAN_BEGIN { get; set; }
         public string PLAN_END { get; set; }

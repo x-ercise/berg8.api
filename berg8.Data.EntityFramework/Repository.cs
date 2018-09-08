@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using DotNetCore.Core.Data;
-using DotNetCore.Core.Domain;
+using Berg8.Core.Data;
+using Berg8.Core.Domain;
 
 namespace DotNetCore.Data.EntityFramework
 {

@@ -2,14 +2,15 @@
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using DotNetCore.Core.Security.Models;
-using DotNetCore.Core.Utilities;
-using DotNetCore.Data.EntityFramework.Identity.Utilities;
-using Microsoft.Owin.Security;
-using AuthenticationDescription = DotNetCore.Core.Security.Models.AuthenticationDescription;
-using IAuthenticationManager = DotNetCore.Core.Security.IAuthenticationManager;
+using Berg8.Core.Security.Models;
+using Berg8.Core.Utilities;
+using Berg8.Data.EntityFramework.Identity.Utilities;
+using Microsoft.AspNetCore.Owin;
+//using Microsoft.Owin.Security;
+using AuthenticationDescription = Berg8.Core.Security.Models.AuthenticationDescription;
+using IAuthenticationManager = Berg8.Core.Security.IAuthenticationManager;
 
-namespace DotNetCore.Data.EntityFramework.Identity
+namespace Berg8.Data.EntityFramework.Identity
 {
     public class AuthenticationManager : IAuthenticationManager
     {

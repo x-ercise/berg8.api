@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DotNetCore.Core.Utilities
+namespace Berg8.Core.Utilities
 {
     public static class CollectionUtils
     {

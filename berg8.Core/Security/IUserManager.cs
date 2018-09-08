@@ -1,8 +1,8 @@
 ﻿using System.Security.Claims;
 using System.Threading.Tasks;
-using DotNetCore.Core.Security.Models;
+using Berg8.Core.Security.Models;
 
-namespace DotNetCore.Core.Security
+namespace Berg8.Core.Security
 {
     public interface IUserManager
     {

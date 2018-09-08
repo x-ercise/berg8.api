@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DotNetCore.Core.Data
+namespace Berg8.Core.Data
 {
     public interface IUnitOfWork : IDisposable
     {

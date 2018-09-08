@@ -1,17 +1,12 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Threading.Tasks;
-using api.Model.Enum;
+﻿using berg8.api.Model.Enum;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
-namespace api.Model
+namespace berg8.api.Model
 {
     public class MESSAGER
     {
-
-        public MESSAGE_TYPE CODE { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))] public MESSAGE_TYPE CODE { get; set; }
         public string MESSAGE { get; set; }
         public MESSAGER()
         {

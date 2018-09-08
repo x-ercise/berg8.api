@@ -2,10 +2,10 @@
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using DotNetCore.Core.Data;
-using DotNetCore.Core.Domain;
+using Berg8.Core.Data;
+using Berg8.Core.Domain;
 
-namespace DotNetCore.Data.EntityFramework
+namespace Berg8.Data.EntityFramework
 {
     public class ReadOnlyRepository<TEntity> : IReadOnlyRepository<TEntity> where TEntity : BaseEntity
     {

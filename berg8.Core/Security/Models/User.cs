@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DotNetCore.Core.Security.Models
+namespace Berg8.Core.Security.Models
 {
     public class User
     {

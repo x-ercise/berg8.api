@@ -1,19 +1,22 @@
 ﻿
 using System.Data;
 using System.Data.Common;
-using System.Data.Entity;
-using System.Data.Entity.Core.Objects;
-using System.Data.Entity.Infrastructure;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+//using System.Data.Entity;
+//using System.Data.Entity.Core.Objects;
+//using System.Data.Entity.Infrastructure;
 using System.Threading.Tasks;
-using DotNetCore.Core.Domain;
-using DotNetCore.Core.Utilities;
-using DotNetCore.Data.EntityFramework.Identity.EntityConfigurations;
-using DotNetCore.Data.EntityFramework.Identity.Models;
-using Microsoft.AspNet.Identity.EntityFramework;
-
-namespace DotNetCore.Data.EntityFramework.Identity
+using Berg8.Core.Domain;
+using Berg8.Core.Utilities;
+using Berg8.Data.EntityFramework.Identity.EntityConfigurations;
+using Berg8.Data.EntityFramework.Identity.Models;
+//using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+namespace Berg8.Data.EntityFramework.Identity
 {
-    public abstract class BaseIdentityDbContext : IdentityDbContext<AppUser, AppRole, int, AppUserLogin, AppUserRole, AppUserClaim>, IDbContext
+    public abstract class BaseIdentityDbContext : IdentityDbContext<AppUser, AppRole, int, AppUserClaim, AppUserRole, AppUserLogin, AppRoleClaim, AppUserToken>, IDbContext
     {
         private ObjectContext _objectContext;
         private DbTransaction _transaction;
@@ -39,7 +42,7 @@ namespace DotNetCore.Data.EntityFramework.Identity
             Database.Log = logger.Log;
         }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<AppUser>().Configure();
             modelBuilder.Entity<AppRole>().Configure();
@@ -50,7 +53,7 @@ namespace DotNetCore.Data.EntityFramework.Identity
             base.OnModelCreating(modelBuilder);
         }
 
-        public new IDbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity
+        public new DbSet<TEntity> Set<TEntity>() where TEntity : BaseEntity
         {
             return base.Set<TEntity>();
         }

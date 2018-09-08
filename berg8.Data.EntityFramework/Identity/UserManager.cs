@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using DotNetCore.Core.Security;
-using DotNetCore.Core.Security.Models;
-using DotNetCore.Core.Utilities;
-using DotNetCore.Data.EntityFramework.Identity.Models;
-using DotNetCore.Data.EntityFramework.Identity.Utilities;
-using Microsoft.AspNet.Identity;
-using UserLoginInfo = DotNetCore.Core.Security.Models.UserLoginInfo;
+using Berg8.Core.Security;
+using Berg8.Core.Security.Models;
+using Berg8.Core.Utilities;
+using Berg8.Data.EntityFramework.Identity.Models;
+using Berg8.Data.EntityFramework.Identity.Utilities;
+//using Microsoft.AspNet.Identity;
+using Microsoft.AspNetCore.Identity;
+using UserLoginInfo = Berg8.Core.Security.Models.UserLoginInfo;
 
-namespace DotNetCore.Data.EntityFramework.Identity
+namespace Berg8.Data.EntityFramework.Identity
 {
     public class UserManager : IUserManager
     {

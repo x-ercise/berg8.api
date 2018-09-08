@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using DotNetCore.Core.Data.Fluent;
-using DotNetCore.Core.Domain;
-using DotNetCore.Core.Utilities;
+using Berg8.Core.Data.Fluent;
+using Berg8.Core.Domain;
+using Berg8.Core.Utilities;
 
-namespace DotNetCore.Data.EntityFramework.Fluent
+namespace Berg8.Data.EntityFramework.Fluent
 {
     public abstract class QueryBuilder<T, TQueryBuilder> : IQueryBuilder<T, TQueryBuilder>
         where T : BaseEntity

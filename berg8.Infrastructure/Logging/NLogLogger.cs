@@ -1,17 +1,17 @@
 ﻿using System;
-using DotNetCore.Core.Utilities;
+using Berg8.Core.Utilities;
 using NLog;
 
-namespace DotNetCore.Infrastructure.Logging
+namespace Berg8.Infrastructure.Logging
 {
-    public class NLogLogger : ILogger
+    public class NLogLogger : Berg8.Core.Utilities.ILogger
     {
         private static readonly Lazy<NLogLogger> LazyLogger = new Lazy<NLogLogger>(() => new NLogLogger()); 
         private static readonly Lazy<NLog.Logger> LazyNLogger= new Lazy<Logger>(LogManager.GetCurrentClassLogger);
 
         private NLogLogger() { }
 
-        public static ILogger Instance
+        public static Berg8.Core.Utilities.ILogger Instance
         {
             get { return LazyLogger.Value; }
         }

@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
-using DotNetCore.Core.Data.Fluent;
-using DotNetCore.Core.Domain;
-using DotNetCore.Core.Utilities;
+//using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
+using Berg8.Core.Data.Fluent;
+using Berg8.Core.Domain;
+using Berg8.Core.Utilities;
 
-namespace DotNetCore.Data.EntityFramework.Fluent
+namespace Berg8.Data.EntityFramework.Fluent
 {
     public abstract class PersistableRepository<T> : IPersistableRepository<T>
         where T : BaseEntity

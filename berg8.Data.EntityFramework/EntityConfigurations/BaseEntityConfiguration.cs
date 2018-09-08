@@ -1,9 +1,11 @@
-﻿using System.Data.Entity.ModelConfiguration;
-using DotNetCore.Core.Domain;
+﻿//using System.Data.Entity.ModelConfiguration;
+using Berg8.Core.Domain;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace DotNetCore.Data.EntityFramework.EntityConfigurations
+namespace Berg8.Data.EntityFramework.EntityConfigurations
 {
-    public abstract class BaseEntityConfiguration<T> : EntityTypeConfiguration<T>
+    public abstract class BaseEntityConfiguration<T> : IEntityTypeConfiguration<T>
         where T : BaseEntity
     {
         protected BaseEntityConfiguration()
@@ -15,6 +17,11 @@ namespace DotNetCore.Data.EntityFramework.EntityConfigurations
 
             Property(x => x.DateLastModified)
                 .IsOptional();
+        }
+
+        public void Configure(EntityTypeBuilder<T> builder)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

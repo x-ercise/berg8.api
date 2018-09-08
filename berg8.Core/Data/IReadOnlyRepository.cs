@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DotNetCore.Core.Domain;
+using Berg8.Core.Domain;
 
-namespace DotNetCore.Core.Data
+namespace Berg8.Core.Data
 {
     public interface IReadOnlyRepository<TEntity> where TEntity : BaseEntity
     {

@@ -1,4 +1,4 @@
-﻿namespace DotNetCore.Core.Security
+﻿namespace Berg8.Core.Security
 {
     public enum SignInStatus
     {

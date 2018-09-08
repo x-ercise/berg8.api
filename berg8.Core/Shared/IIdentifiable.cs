@@ -1,4 +1,4 @@
-﻿namespace DotNetCore.Core
+﻿namespace Berg8.Core
 {
     public interface IIdentifiable<T>
     {

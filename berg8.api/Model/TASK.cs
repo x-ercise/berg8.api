@@ -1,13 +1,15 @@
 ﻿using System.Collections.Generic;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
-
-namespace api.Model
+namespace berg8.api.Model
 {
-    using api.Model.Enum;
+    using berg8.api.Model.Enum;
+
     public class TASK
     {
         public EMPLOYEE REQUESTOR { get; set; }
-        public WIDGET_TYPE WIDGET { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))] public WIDGET_TYPE WIDGET { get; set; }
         public string STATUS { get; set; }
         public int COUNT { get; set; }
         public static TASK CreateInstance()

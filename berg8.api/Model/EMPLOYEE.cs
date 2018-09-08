@@ -1,14 +1,14 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace api.Model
+namespace berg8.api.Model
 {
     public class EMPLOYEE
     {
-        [DefaultValue(value: "")] public string CODE { get; set; }
-        [DefaultValue(value: "")] public string NAME { get; set; }
-        [DefaultValue(value: "")] public string EMAIL { get; set; }
-        [DefaultValue(value: "")] public string CONTACT_NO { get; internal set; }
+        public string CODE { get; set; }
+        public string NAME { get; set; }
+        public string EMAIL { get; set; }
+        public string CONTACT_NO { get; set; }
 
         private EMPLOYEE()
         {

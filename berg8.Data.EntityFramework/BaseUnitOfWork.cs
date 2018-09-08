@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using DotNetCore.Core.Data;
-using DotNetCore.Core.Data.Fluent;
-using DotNetCore.Core.Utilities;
+using Berg8.Core.Data;
+using Berg8.Core.Data.Fluent;
+using Berg8.Core.Utilities;
 
-namespace DotNetCore.Data.EntityFramework
+namespace Berg8.Data.EntityFramework
 {
     public abstract class BaseUnitOfWork : IUnitOfWork
     {

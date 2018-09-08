@@ -1,6 +1,6 @@
-﻿using DotNetCore.Core.Domain;
+﻿using Berg8.Core.Domain;
 
-namespace DotNetCore.Core.Data.Fluent
+namespace Berg8.Core.Data.Fluent
 {
     public interface IQueryableRepository<TEntity, out TQueryBuilder>
         where TEntity : BaseEntity

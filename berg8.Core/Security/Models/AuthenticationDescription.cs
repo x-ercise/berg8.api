@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 
-namespace DotNetCore.Core.Security.Models
+namespace Berg8.Core.Security.Models
 {
     public class AuthenticationDescription
     {

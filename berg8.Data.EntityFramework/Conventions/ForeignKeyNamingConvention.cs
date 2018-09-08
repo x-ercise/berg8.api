@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity.Core.Metadata.Edm;
-using System.Data.Entity.Infrastructure;
-using System.Data.Entity.ModelConfiguration.Conventions;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+//using System.Data.Entity.Core.Metadata.Edm;
+//using System.Data.Entity.Infrastructure;
+//using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 
-namespace DotNetCore.Data.EntityFramework.Conventions
+namespace Berg8.Data.EntityFramework.Conventions
 {
     public class ForeignKeyNamingConvention : IStoreModelConvention<AssociationType>
     {

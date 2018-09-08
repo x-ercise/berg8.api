@@ -1,13 +1,17 @@
 ﻿using System;
-using api.Model.Enum;
+using berg8.api.Model.Enum;
 
-namespace api.Model.Request
+namespace berg8.api.Model.Request
 {
     public class REQ_DOCUMENT
     {
         public EMPLOYEE OPERATOR { get; set; }
         public FILTER_DOCUMENT FILTER { get; set; }
-
+        public REQ_DOCUMENT()
+        {
+            OPERATOR = EMPLOYEE.CreateInstance();
+            FILTER = new FILTER_DOCUMENT();
+        }
     }
 
     public class FILTER_DOCUMENT : PERIOD

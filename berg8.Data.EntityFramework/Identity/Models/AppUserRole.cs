@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
-
-namespace DotNetCore.Data.EntityFramework.Identity.Models
+﻿//using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+namespace Berg8.Data.EntityFramework.Identity.Models
 {
     public class AppUserRole : IdentityUserRole<int>
     {

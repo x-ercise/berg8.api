@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DotNetCore.Core.Utilities
+namespace Berg8.Core.Utilities
 {
     public static class ExceptionUtils
     {

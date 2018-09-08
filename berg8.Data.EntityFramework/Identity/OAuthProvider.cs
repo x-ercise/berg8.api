@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using DotNetCore.Core.Utilities;
-using DotNetCore.Data.EntityFramework.Identity.Models;
-using Microsoft.AspNet.Identity;
+using Berg8.Core.Utilities;
+using Berg8.Data.EntityFramework.Identity.Models;
+//using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
+using Microsoft.AspNetCore.Identity;
 
 namespace DotNetCore.Data.EntityFramework.Identity
 {
