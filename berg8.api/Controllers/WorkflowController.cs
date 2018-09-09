@@ -51,7 +51,7 @@ namespace berg8.api.Controllers
                     {
                         for (int ii = 0; ii < request.FILTER.CLAIM_TYPES.Length; ii++)
                         {
-                            DOCUMENT oItem = request.ToDocumentMockup($"Document {i}", DOCUMENT_TYPE.CLAIM, request.FILTER.CLAIM_TYPES[ii]);
+                            DOCUMENT oItem = request.ToDocumentMockup($"{i}", DOCUMENT_TYPE.CLAIM, request.FILTER.CLAIM_TYPES[ii]);
                             oDocuments.Add(oItem);
                         }
                     }
