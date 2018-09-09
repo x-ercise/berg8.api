@@ -43,7 +43,7 @@ namespace berg8.api.Model
             oDocument.REQUESTOR = request.ToEmployeeMockup(true);
             oDocument.STATUS = "Waiting";
             oDocument.TRANS_DATE = oDocument.PLAN_BEGIN;
-            return new DOCUMENT();
+            return oDocument;
 
         }
     }
